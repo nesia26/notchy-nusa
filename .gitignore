@@ -1,0 +1,32 @@
+# macOS system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Large Application Bundles (>100MB cannot be pushed to GitHub)
+# The full Notchy.app is distributed via GitHub Releases
+*.app/
+*.appex/
+
+# Pre-built release archives (published via gh release)
+*.zip
+*.dmg
+*.tar.gz
+
+# Build artifacts & Temporary files
+build/
+.build/
+DerivedData/
+*.o
+*.dylib.dSYM/
+*.dSYM/
+*.orig
+*.swp
+*.tmp
+
+# Raw screen recordings (except curated demo in assets/)
+Screen Recording *.mov
