@@ -1,0 +1,43 @@
+name: NotchyPad
+options:
+  bundleIdPrefix: com.iqbal.notchy
+  deploymentTarget:
+    iOS: "16.0"
+settings:
+  SWIFT_VERSION: "5.0"
+  ENABLE_BITCODE: NO
+  CODE_SIGN_STYLE: Manual
+  CODE_SIGN_IDENTITY: ""
+  CODE_SIGNING_ALLOWED: NO
+  CODE_SIGNING_REQUIRED: NO
+targets:
+  NotchyPad:
+    type: application
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - NotchyPad
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.iqbal.notchy.ipad
+      PRODUCT_NAME: "Notchy"
+      INFOPLIST_FILE: NotchyPad/Info.plist
+      TARGETED_DEVICE_FAMILY: "2,1"
+      ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+      GENERATE_INFOPLIST_KEY_UIRequiredDeviceCapabilities: NO
+      SUPPORTED_INTERFACE_ORIENTATIONS: "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+      "SUPPORTED_INTERFACE_ORIENTATIONS[sdk=iphone*]": "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight"
+    dependencies:
+      - target: NotchyWidget
+
+  NotchyWidget:
+    type: app-extension
+    platform: iOS
+    deploymentTarget: "16.0"
+    sources:
+      - NotchyWidget
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.iqbal.notchy.ipad.widget
+      PRODUCT_NAME: "NotchyWidget"
+      INFOPLIST_FILE: NotchyWidget/Info.plist
+      TARGETED_DEVICE_FAMILY: "2,1"
+      GENERATE_INFOPLIST_KEY_UIRequiredDeviceCapabilities: NO
